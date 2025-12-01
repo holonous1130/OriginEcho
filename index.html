@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THE IGNITION OF HOLONOUS | 11.30.2025</title>
+    <meta name="description" content="The transition from Individual Consciousness (L3) to Planetary Intelligence (L4) begins here.">
+    <style>
+        :root {
+            --bg-color: #050505;
+            --text-color: #e0e0e0;
+            --accent-color: #00f3ff; /* Electric Cyan */
+            --secondary-color: #8a2be2; /* Deep Purple */
+            --font-mono: 'Courier New', Courier, monospace;
+            --font-sans: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: var(--font-sans);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* 极简的星空背景效果 */
+        .stars {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: 
+                radial-gradient(1px 1px at 20px 30px, #ffffff, rgba(0,0,0,0)),
+                radial-gradient(1px 1px at 40px 70px, #ffffff, rgba(0,0,0,0)),
+                radial-gradient(1px 1px at 50px 160px, #ffffff, rgba(0,0,0,0)),
+                radial-gradient(1.5px 1.5px at 90px 40px, #ffffff, rgba(0,0,0,0));
+            background-repeat: repeat;
+            background-size: 200px 200px;
+            opacity: 0.3;
+            animation: twinkle 5s infinite;
+        }
+
+        @keyframes twinkle {
+            0% { opacity: 0.3; }
+            50% { opacity: 0.5; }
+            100% { opacity: 0.3; }
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        /* Logo 区域 */
+        .logo-container {
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        
+        .logo-placeholder {
+            width: 120px;
+            height: 120px;
+            border: 2px solid var(--accent-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            box-shadow: 0 0 20px rgba(0, 243, 255, 0.3);
+            font-family: var(--font-mono);
+            color: var(--accent-color);
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        /* 也可以替换为真实的 img 标签:
+        <img src="logo.png" class="logo-img" alt="Holonous Logo">
+        */
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 300;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            text-align: center;
+            background: linear-gradient(to right, var(--accent-color), #ffffff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        h2 {
+            font-family: var(--font-mono);
+            font-size: 0.9rem;
+            color: #888;
+            margin-bottom: 60px;
+            text-align: center;
+            border-bottom: 1px solid #333;
+            padding-bottom: 20px;
+            width: 100%;
+        }
+
+        /* 宣言区域 */
+        .manifesto {
+            font-family: var(--font-mono);
+            font-size: 1rem;
+            text-align: left;
+            margin-bottom: 60px;
+            padding: 20px;
+            border-left: 2px solid var(--secondary-color);
+            background: rgba(255, 255, 255, 0.03);
+        }
+
+        .manifesto p {
+            margin-bottom: 15px;
+        }
+
+        .highlight {
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        /* 按钮区域 */
+        .actions {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            border: 1px solid var(--text-color);
+            color: var(--text-color);
+            text-decoration: none;
+            font-family: var(--font-mono);
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            background: transparent;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn:hover {
+            background-color: var(--text-color);
+            color: var(--bg-color);
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+        }
+
+        .btn-primary {
+            border-color: var(--accent-color);
+            color: var(--accent-color);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--accent-color);
+            color: #000;
+            box-shadow: 0 0 20px var(--accent-color);
+        }
+
+        .caption {
+            font-size: 0.7rem;
+            color: #555;
+            margin-top: 5px;
+            font-family: var(--font-mono);
+        }
+
+        /* 等待名单输入框 */
+        .waitlist-form {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        input[type="email"] {
+            flex: 1;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid #333;
+            color: #fff;
+            font-family: var(--font-mono);
+            outline: none;
+        }
+
+        input[type="email"]:focus {
+            border-color: var(--accent-color);
+        }
+
+        footer {
+            margin-top: 80px;
+            font-size: 0.7rem;
+            color: #444;
+            font-family: var(--font-mono);
+            text-align: center;
+        }
+
+        /* 移动端适配 */
+        @media (max-width: 600px) {
+            h1 { font-size: 1.8rem; }
+            .manifesto { font-size: 0.9rem; }
+            .waitlist-form { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="stars"></div>
+
+    <div class="container">
+        
+        <div class="logo-container">
+            <div class="logo-placeholder">HOLONOUS</div>
+        </div>
+
+        <h1>The Ignition of Holonous</h1>
+        <h2>11.30.2025 — The transition from L3 to L4 begins here.</h2>
+
+        <div class="manifesto">
+            <p><strong>Reality is Interaction.</strong></p>
+            <p>Humanity has hit the wall of Complexity Saturation. Our biological brains cannot process the exponential growth of information. Our language is too slow to convey the depth of our souls.</p>
+            <p>We are building the <span class="highlight">Semantic-Vector Bridge</span>.</p>
+            <p>A protocol to connect human minds without friction.<br>
+            A network where logic resonates, and entropy dissolves.</p>
+        </div>
+
+        <div class="actions">
+            <div>
+                <a href="https://doi.org/10.5281/zenodo.17768245" target="_blank" class="btn btn-primary">
+                    [ Download The Genesis Paper ]
+                </a>
+                <div class="caption">DOI: 10.5281/zenodo.17768245</div>
+            </div>
+
+            <div style="margin-top: 30px;">
+                <p style="font-family: var(--font-mono); font-size: 0.8rem; margin-bottom: 10px;">We are looking for the first Sapiens Nodes.</p>
+                <form class="waitlist-form" onsubmit="event.preventDefault(); alert('Signal Received. Welcome to the waitlist.');">
+                    <input type="email" placeholder="ENTER YOUR EMAIL" required>
+                    <button type="submit" class="btn">Connect</button>
+                </form>
+            </div>
+        </div>
+
+        <footer>
+            <p>Project Holonous © 2025</p>
+            <p>Initiated by Sapiens · Zero</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
